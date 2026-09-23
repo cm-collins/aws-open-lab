@@ -1,0 +1,18 @@
+---
+description: Guardrails for Havey mobile-first HTML flow prototypes under apps/design/flows
+globs: apps/design/flows/**,apps/design/FLOW-DESIGN-GUARDRAILS.md,apps/design/onboarding/**
+alwaysApply: false
+---
+
+# Havey flow design
+
+When creating or editing flow prototypes, onboarding integration, or related design docs:
+
+1. **Read first:** [`apps/design/FLOW-DESIGN-GUARDRAILS.md`](../../apps/design/FLOW-DESIGN-GUARDRAILS.md)
+2. **Work only under** `apps/design/flows/` for HTML screen specs.
+3. **Keep illustration PNGs** in `apps/design/onboarding/` — no HTML there.
+4. **Mobile first; web follows.** Use `tokens/css/havey-tokens.css` — no hardcoded brand hex.
+5. **One HTML file = one screen state.** Use shared phone frame from `flows/shared/`.
+6. **Link to `HAV-*`** in each flow folder README.
+
+Do not copy prototype HTML into Flutter or Next.js production code.
