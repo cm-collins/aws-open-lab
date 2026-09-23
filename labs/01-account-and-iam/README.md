@@ -20,7 +20,9 @@ Follow the runbooks **in order**:
 
 Concepts: [IAM and the other foundations](../../docs/foundations.md#iam)
 
-**Next lab (planned):** [AWS CLI and bash automation](../02-aws-cli/) will automate the billing budget and other guardrails after the CLI is configured. See [planned-aws-cli-lab.md](../../docs/planned-aws-cli-lab.md).
+**Scripts:** [scripts/](scripts/) — budget create/update/delete (CLI, after [Lab 2](../02-aws-cli/)).
+
+**Next lab:** [AWS CLI and bash automation](../02-aws-cli/) — install and verify the CLI, then optional Lab 1 budget scripts.
 
 ## Final check
 

@@ -19,13 +19,13 @@ Work in the AWS Free Tier when you can. Stop or delete resources at the end of e
 | Order | Lab | You will be able to |
 | --- | --- | --- |
 | 1 | [Account and IAM](labs/01-account-and-iam/) | Sign in safely and grant the least access a task needs |
-| 2 | [AWS CLI and bash automation](labs/02-aws-cli/) | Configure the CLI and script guardrails (e.g. budgets) — [planned](docs/planned-aws-cli-lab.md) |
+| 2 | [AWS CLI and bash automation](labs/02-aws-cli/) | Install and verify the CLI (budget scripts live in Lab 1) |
 | 3 | Networking | Build a VPC with public and private subnets |
 | 4 | Compute | Run a virtual machine and reach it on purpose |
 | 5 | Storage | Store and share files without making the bucket public by accident |
 | 6 | Infrastructure as code | Recreate a lab from a file instead of the console |
 
-Labs marked planned or “not written yet” land when someone has run them on a real account. Lab 2 is stubbed so CLI/bash work has a clear home before scripts are added.
+Labs marked “not written yet” land when someone has run them on a real account. Lab 2 runbooks are available; bump **Last verified** after you complete them.
 
 ## If you already know another cloud
 
@@ -42,3 +42,7 @@ Your account, your bill. Before you start a lab:
 ## Contributing
 
 Corrections and new labs are welcome. A good lab has a goal, the steps you actually followed, what it cost, and what to delete. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+Original lab content, runbooks, and scripts in this repository are licensed under the [MIT License](LICENSE). AWS Agent Toolkit skills are installed locally, not vendored in git — see [NOTICE.md](NOTICE.md).

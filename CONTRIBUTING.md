@@ -1,6 +1,8 @@
 # Contributing
 
-Add something you have done yourself.
+Add something you have done yourself. By contributing, you agree that your contributions are licensed under the repository [MIT License](LICENSE).
+
+Do not commit secrets, `.env` files, keys, or account-specific IDs. Use `*.env.example` templates only.
 
 ## A note
 
@@ -17,7 +19,9 @@ Copy [labs/runbooks/TEMPLATE.md](labs/runbooks/TEMPLATE.md) for each new runbook
 
 Add `runbooks/README.md` as a numbered index table linking each runbook and its outcome.
 
-Optional **`scripts/`** under a lab: bash helpers that match a verified runbook (env vars + example config, no secrets). Lab 2 documents the intended pattern; see [docs/planned-aws-cli-lab.md](docs/planned-aws-cli-lab.md).
+Optional **`scripts/`** under a lab: bash helpers that match a verified runbook (env vars + example config, no secrets).
+
+When a script **creates** something in AWS, add **`update-*`** and **`delete-*`** in the **same lab** as the resource (e.g. budgets under `labs/01-account-and-iam/scripts/budgets/`). **Lab 2** scripts are CLI tooling only — see [docs/lab-2-script-roadmap.md](docs/lab-2-script-roadmap.md).
 
 Each runbook should include:
 

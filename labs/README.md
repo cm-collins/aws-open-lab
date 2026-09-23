@@ -5,7 +5,7 @@ Do these in order. Each lab assumes the one before it.
 | Lab | Status |
 | --- | --- |
 | [01 — Account and IAM](01-account-and-iam/) | Ready |
-| [02 — AWS CLI and bash automation](02-aws-cli/) | Planned ([roadmap](../docs/planned-aws-cli-lab.md)) |
+| [02 — AWS CLI and bash automation](02-aws-cli/) | Runbooks written — verify on account to mark ready |
 | 03 — Networking | Not written yet |
 | 04 — Compute | Not written yet |
 | 05 — Storage | Not written yet |

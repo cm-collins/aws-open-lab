@@ -2,6 +2,10 @@
 
 This folder contains Cursor command definitions and related helper docs used in this repo.
 
+**AWS skills:** Repo-specific skills live in [`.cursor/skills/`](skills/). AWS Agent Toolkit skills are **not committed** — sync locally with [`scripts/sync-agent-toolkit-skills-to-repo.sh`](../scripts/sync-agent-toolkit-skills-to-repo.sh). See [skills/README.md](skills/README.md) and [NOTICE.md](../NOTICE.md).
+
+**AWS MCP:** [`.cursor/mcp.json`](mcp.json) defines the **`aws-mcp`** server (`uvx` + `mcp-proxy-for-aws`). Requires [uv](https://docs.astral.sh/uv/) and valid AWS credentials. Sync from `~/.cursor/mcp.json` with [`scripts/sync-agent-toolkit-mcp-to-repo.sh`](../scripts/sync-agent-toolkit-mcp-to-repo.sh).
+
 Start with [`AGENTS.md`](../AGENTS.md) for repo routing, source-of-truth precedence, and task routing.
 
 This file lives at `.cursor/README.md` (outside `.cursor/commands/`) so it is **not** interpreted as a command.

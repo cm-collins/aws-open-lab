@@ -1,12 +1,19 @@
-# Secrets and local credentials
+# --- Secrets and credentials (never commit) ---
 .env
 .env.*
+!.env.example
+labs/**/config/.env
 *.pem
 *.key
 credentials
 .aws/
+**/credentials
+**/config/credentials
 
-# Terraform
+# --- Lab config: commit examples only ---
+# (budgets.env.example, cli.env.example)
+
+# --- Terraform ---
 .terraform/
 *.tfstate
 *.tfstate.*
@@ -18,7 +25,32 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
-# OS and editors
+# --- Local scratch and tool output ---
+tmp/
+*.log
+*.tmp
+*.swp
+*~
+
+# --- Language / package caches (future labs) ---
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# --- OS and editors ---
 .DS_Store
 .idea/
 .vscode/
+*.code-workspace
+
+# --- Cursor: AWS Agent Toolkit skills (sync locally; see NOTICE.md) ---
+.cursor/skills/*
+!.cursor/skills/README.md
+!.cursor/skills/senior-dotnet-engineer/
+!.cursor/skills/senior-flutter-engineer/
+!.cursor/skills/senior-frontend-engineer/

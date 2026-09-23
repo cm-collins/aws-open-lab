@@ -1,30 +1,27 @@
-# Lab 2 scripts (planned)
+# Lab 2 scripts
 
-Bash helpers for tasks you first do in the console during Lab 1.
+CLI **tooling** for this lab—not account guardrails. Budget create/update/delete lives in [Lab 1 scripts](../../01-account-and-iam/scripts/).
 
-## Planned scripts
-
-| Script | Purpose |
+| Script | Runbook |
 | --- | --- |
-| `create-monthly-cost-budget.sh` | Idempotent monthly cost budget with the same notification thresholds as the Lab 1 console template |
+| `verify-aws-cli-setup.sh` | [Verify AWS CLI setup](../runbooks/verify-aws-cli-setup.md) |
 
-Supporting files (planned):
+Roadmap: [docs/lab-2-script-roadmap.md](../../docs/lab-2-script-roadmap.md).
 
-- `../config/budgets/monthly-cost-budget.example.json` — budget document passed to `aws budgets create-budget`
-- `../config/.env.example` — `BUDGET_NAME`, `BUDGET_LIMIT_USD`, `BUDGET_EMAIL`, optional `AWS_PROFILE`
+## Script output
 
-## Usage (future)
+Scripts use the same premium CLI summaries as Lab 1: banner, check tables, and a **Summary** outcome. See [`labs/shared/scripts/lib/premium-output.sh`](../../shared/scripts/lib/premium-output.sh) and [Lab 1 scripts README](../../01-account-and-iam/scripts/README.md#script-output).
 
-Documented in the runbook. Expect:
+Optional (defaults to `AWS_PROFILE=lab-admin` if missing):
 
 ```bash
-export AWS_PROFILE=lab-admin
-# shellcheck create-monthly-cost-budget.sh
-./create-monthly-cost-budget.sh
+cp labs/02-aws-cli/config/cli.env.example labs/02-aws-cli/config/.env
 ```
 
-Do not commit `.env`, access keys, or account-specific JSON with real emails until sanitized.
+Run:
 
-## Contributing
+```bash
+bash labs/02-aws-cli/scripts/verify-aws-cli-setup.sh
+```
 
-Implement only after the matching runbook is tested. Match Lab 1 behavior before adding extras.
+Phased **stderr** logging and **stdout** summary tables match Lab 1 ([`lab-runtime.sh`](../../shared/scripts/lib/lab-runtime.sh)).

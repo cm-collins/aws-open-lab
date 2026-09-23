@@ -70,6 +70,16 @@ Pick **Monthly cost budget** unless you want an alert on almost any charge. You 
 2. Open each message and **confirm** the subscription (link in the email). Until you confirm, alerts may not arrive.
   - **Verify:** Budget detail page lists your email recipients without a “pending confirmation” warning (wording may vary).
 
+### Verify with CLI (optional, after Lab 2)
+
+Set **`BUDGET_NAME`**, **`BUDGET_LIMIT_USD`**, and **`BUDGET_EMAIL`** in `labs/01-account-and-iam/config/.env` to match this console budget, then:
+
+```bash
+bash labs/01-account-and-iam/scripts/budgets/verify-console-monthly-cost-budget.sh
+```
+
+See [Verify console budget (CLI)](verify-console-monthly-cost-budget-cli.md).
+
 
 
 ## After you finish
@@ -89,7 +99,9 @@ If daily sign-in uses an IAM user, complete **[Enable IAM billing access via a g
 
 | Symptom                                                    | Likely cause                                | What to try                                                                                  |
 | ---------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| No alert email                                             | Subscription not confirmed                  | Search spam; click confirm in AWS email                                                      |
+| No alert email (only confirmation mail)                    | Normal at $0 spend                          | Budget alerts fire at **85% / 100% / forecast**, not when the budget is created              |
+| No mail at all                                             | Subscription not confirmed                  | Search **dev-collins@outlook.com** spam for **AWS Budgets** / **Amazon SNS**; click **Confirm subscription** |
+| verify shows **SNS confirmation FAIL**                       | PendingConfirmation                       | Re-send from Billing → budget → alert email, or delete/recreate budget after fixing `.env` email |
 | **Budgets** missing or access denied                       | IAM user without billing/budget permissions | Sign in as root for setup, or attach billing policy to the IAM user                          |
 | Alert never fires but you see charges in **Cost Explorer** | Budget amount set very high                 | Lower the budget amount or add a **Zero spend budget** as a second budget                    |
 | Only **Customize (advanced)** appears                      | Console A/B or account type                 | Use advanced flow: monthly cost budget, same amount and email, add the same three thresholds |
@@ -98,17 +110,18 @@ If daily sign-in uses an IAM user, complete **[Enable IAM billing access via a g
 
 
 
-## Automation (CLI lab — planned)
+## Automation (optional, after Lab 2 CLI)
 
-This runbook stays **console-first** so you see thresholds and confirm notification email.
+This runbook stays **console-first**. To recreate the same budget from bash (use a different **`BUDGET_NAME`** than the console budget):
 
-When [Lab 2 — AWS CLI](../../02-aws-cli/) is ready, the same monthly cost budget will be creatable with bash and `aws budgets create-budget`, using env-driven settings and a checked-in JSON example. Plan and layout: [docs/planned-aws-cli-lab.md](../../../docs/planned-aws-cli-lab.md).
-
-Until then, use the steps above once in the console.
+1. [Lab 2 — Install the AWS CLI](../../02-aws-cli/runbooks/install-and-configure-aws-cli.md)
+2. [Create monthly cost budget (CLI)](create-monthly-cost-budget-cli.md) · [scripts/README](../scripts/README.md)
 
 ## Teardown
 
 Keep the budget. Raise or lower the amount as your labs grow. Delete the budget only if you replace it with something better.
+
+If you created a **separate** budget via CLI (`BUDGET_NAME` in `labs/01-account-and-iam/config/.env`), tear it down with [Delete monthly cost budget (CLI)](delete-monthly-cost-budget-cli.md).
 
 ## Last verified
 
