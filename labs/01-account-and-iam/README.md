@@ -16,6 +16,7 @@ Follow the runbooks **in order**:
 2. [Enable MFA on the root user](runbooks/enable-root-mfa.md)
 3. [Set a billing alert](runbooks/billing-alert.md)
 4. [Create an admin IAM user](runbooks/create-admin-iam-user.md)
+5. [Enable IAM billing access via a group](runbooks/enable-iam-billing-via-group.md) — recommended if **Cost and usage** shows Access denied
 
 Concepts: [IAM and the other foundations](../../docs/foundations.md#iam)
 
@@ -28,6 +29,7 @@ Concepts: [IAM and the other foundations](../../docs/foundations.md#iam)
 - You can sign in as the IAM user (e.g. **`lab-admin`**) with MFA.
 - You understand **why** daily work should not use root ([runbook](runbooks/create-admin-iam-user.md#why-not-use-root-for-daily-work)).
 - You are signed in as the IAM user, not root, before starting Lab 2 or later labs.
+- (Recommended) **`lab-admin`** is in group **`lab-billing`** and **Cost and usage** on the console home loads without **Access denied**.
 
 ## Clean up
 

@@ -195,7 +195,7 @@ AWS shows a banner: **This is the only time you can view and download this passw
     - **Verify:** On **IAM → Users → lab-admin → Security credentials**, **Last console sign-in** updates from **Never** to a recent time after your first login.
     - **Verify:** The console top bar shows **`lab-admin`** (your IAM user), not **Root user**.
 
-    **Console home — Cost and usage shows “Access denied”?** That is common even with **`AdministratorAccess`** until the account turns on **IAM user and role access to Billing information** (one-time, as root). See [Set a billing alert](billing-alert.md) optional step 5. Budget alerts you already created still work; this only affects billing pages and some dashboard widgets.
+    **Console home — Cost and usage shows “Access denied”?** Complete [Enable IAM billing access via a group](enable-iam-billing-via-group.md) (root activates the account setting; then group **`lab-billing`**). Budget email alerts still work without this; billing **pages** and the home widget need it.
 
     From here on, use **`lab-admin`** for the console and future labs. Use root only when a runbook says so.
 
@@ -217,7 +217,7 @@ AWS shows a banner: **This is the only time you can view and download this passw
 | Access denied on a service | Policy missing | As root, confirm **`AdministratorAccess`** is attached to **`lab-admin`** |
 | MFA required | Account or user policy | Finish MFA assignment on the user |
 | Console shows account name, unsure if root | Signed in as root | Sign out; sign in only via IAM user URL and **`lab-admin`** |
-| **Cost and usage** widget: Access denied | IAM billing access not activated for the account | Sign in as **root** once → **Billing → Account** → activate IAM access to billing ([billing runbook](billing-alert.md)) |
+| **Cost and usage** widget: Access denied | Account billing access for IAM off and/or no billing group | Follow [Enable IAM billing access via a group](enable-iam-billing-via-group.md) |
 
 ## Teardown
 
