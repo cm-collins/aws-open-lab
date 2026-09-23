@@ -1,0 +1,24 @@
+# Secrets and local credentials
+.env
+.env.*
+*.pem
+*.key
+credentials
+.aws/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
