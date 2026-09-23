@@ -10,4 +10,6 @@ Do these in order. Each lab assumes the one before it.
 | 04 — Storage | Not written yet |
 | 05 — Infrastructure as code | Not written yet |
 
-A lab is "ready" when someone has followed it on a real account.
+Each lab has a `runbooks/` folder: numbered tasks with verify steps and a **Last verified** date.
+
+A lab is "ready" when someone has followed its runbooks on a real account.

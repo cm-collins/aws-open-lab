@@ -8,10 +8,11 @@ This is a shared notebook, not a certification dump. Labs stay small enough to f
 
 1. Pick the next unfinished lab in [labs](labs/).
 2. Read the matching note in [docs](docs/) if the ideas are new.
-3. Build it in your own AWS account.
-4. Add what surprised you: a short note, a diagram, or a fix for a step that was unclear.
+3. Follow the runbooks in that lab’s `runbooks/` folder, in order.
+4. Build it in your own AWS account.
+5. Add what surprised you: fix a runbook step or bump **Last verified** in a pull request.
 
-Work in the AWS Free Tier when you can. Stop or delete resources at the end of each lab. The lab README says what to delete.
+Work in the AWS Free Tier when you can. Stop or delete resources at the end of each lab. Each runbook says what to tear down.
 
 ## Path
 
