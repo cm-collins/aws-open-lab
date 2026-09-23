@@ -19,6 +19,8 @@ Follow the runbooks **in order**:
 
 Concepts: [IAM and the other foundations](../../docs/foundations.md#iam)
 
+**Next lab (planned):** [AWS CLI and bash automation](../02-aws-cli/) will automate the billing budget and other guardrails after the CLI is configured. See [planned-aws-cli-lab.md](../../docs/planned-aws-cli-lab.md).
+
 ## Final check
 
 - Root has MFA.

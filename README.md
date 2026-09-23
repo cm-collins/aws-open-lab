@@ -19,12 +19,13 @@ Work in the AWS Free Tier when you can. Stop or delete resources at the end of e
 | Order | Lab | You will be able to |
 | --- | --- | --- |
 | 1 | [Account and IAM](labs/01-account-and-iam/) | Sign in safely and grant the least access a task needs |
-| 2 | Networking | Build a VPC with public and private subnets |
-| 3 | Compute | Run a virtual machine and reach it on purpose |
-| 4 | Storage | Store and share files without making the bucket public by accident |
-| 5 | Infrastructure as code | Recreate a lab from a file instead of the console |
+| 2 | [AWS CLI and bash automation](labs/02-aws-cli/) | Configure the CLI and script guardrails (e.g. budgets) — [planned](docs/planned-aws-cli-lab.md) |
+| 3 | Networking | Build a VPC with public and private subnets |
+| 4 | Compute | Run a virtual machine and reach it on purpose |
+| 5 | Storage | Store and share files without making the bucket public by accident |
+| 6 | Infrastructure as code | Recreate a lab from a file instead of the console |
 
-Labs 2–5 land here after someone has actually run them. Empty folders are worse than a short path.
+Labs marked planned or “not written yet” land when someone has run them on a real account. Lab 2 is stubbed so CLI/bash work has a clear home before scripts are added.
 
 ## If you already know another cloud
 

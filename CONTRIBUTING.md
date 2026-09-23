@@ -17,6 +17,8 @@ Copy [labs/runbooks/TEMPLATE.md](labs/runbooks/TEMPLATE.md) for each new runbook
 
 Add `runbooks/README.md` as a numbered index table linking each runbook and its outcome.
 
+Optional **`scripts/`** under a lab: bash helpers that match a verified runbook (env vars + example config, no secrets). Lab 2 documents the intended pattern; see [docs/planned-aws-cli-lab.md](docs/planned-aws-cli-lab.md).
+
 Each runbook should include:
 
 - **Outcome** — one sentence
