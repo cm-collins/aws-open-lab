@@ -8,6 +8,8 @@ On your Linux machine, **AWS CLI v2** is installed, profile **`lab-admin`** poin
 
 - [Lab 1 complete](../../01-account-and-iam/README.md#final-check) — especially IAM user **`lab-admin`** (not root for daily work)
 - Terminal on Linux (this lab uses the [official AWS CLI v2 bundle](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html))
+
+**Alternative:** Reopen this repo in the [dev container](../../../.devcontainer/README.md) — **AWS CLI v2**, **gh**, **jq**, **uv**, and other lab CLIs are preinstalled. Mount host **`~/.aws`**, then complete **Part C** (profile **`lab-admin`**) inside the container or on the host.
 - Time: ~20 minutes
 - Cost: Free (CLI is local; AWS charges only if you call paid services)
 

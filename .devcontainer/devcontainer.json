@@ -1,0 +1,28 @@
+{
+  "name": "AWS Open Lab",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached"
+  ],
+  "containerEnv": {
+    "AWS_PROFILE": "lab-admin"
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.eol": "\n"
+      },
+      "extensions": [
+        "amazonwebservices.aws-toolkit-vscode",
+        "timonwong.shellcheck"
+      ]
+    }
+  },
+  "forwardPorts": []
+}

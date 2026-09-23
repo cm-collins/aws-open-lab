@@ -14,6 +14,10 @@ This is a shared notebook, not a certification dump. Labs stay small enough to f
 
 Work in the AWS Free Tier when you can. Stop or delete resources at the end of each lab. Each runbook says what to tear down.
 
+## Development container (optional)
+
+For a consistent Linux shell with **AWS CLI v2**, **gh**, **Terraform**, **CDK**, **jq**, **uv/uvx** (MCP), and related tools, reopen this repo in a [dev container](.devcontainer/README.md). Host **`~/.aws`** is mounted in; lab **`config/.env`** files are scaffolded on first build. Run `bash .devcontainer/verify-tools.sh` after rebuild.
+
 ## Path
 
 | Order | Lab | You will be able to |
