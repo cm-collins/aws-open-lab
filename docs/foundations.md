@@ -6,9 +6,13 @@ Four services show up in almost everything else. Learn these before the catalog.
 
 IAM answers who can do what. A user is a person. A role is a hat a person or a service puts on. A policy is the list of allowed actions.
 
-The root user owns the account. Use it once to turn on MFA and to create an administrator, then stop using it for daily work.
+A **permissions boundary** is an optional ceiling on a user or role: policies grant access, but the user cannot exceed what the boundary allows. Lab 1 skips boundaries; see [Create an admin IAM user](../labs/01-account-and-iam/runbooks/create-admin-iam-user.md) for the full comparison.
 
-Azure equivalent: Entra ID users and role assignments. An IAM policy is the permission list; an IAM role is closer to a role you assign than to an Entra group.
+The root user owns the account. It cannot be restricted by IAM policies the way users can. If root credentials leak, the whole account is at risk. Use root briefly for setup (MFA on root, create an admin IAM user), then do daily work as that IAM user—not root.
+
+Azure equivalent: Entra ID users and role assignments. An IAM policy is the permission list; an IAM role is closer to a role you assign than to an Entra group. Avoiding root for daily work is like avoiding the subscription Global Administrator for everyday tasks.
+
+Lab walkthrough: [Create an admin IAM user](../labs/01-account-and-iam/runbooks/create-admin-iam-user.md) (includes why and when root is still OK).
 
 ## VPC
 

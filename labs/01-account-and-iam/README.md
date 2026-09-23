@@ -25,8 +25,9 @@ Concepts: [IAM and the other foundations](../../docs/foundations.md#iam)
 
 - Root has MFA.
 - A billing alert or budget notification is configured.
-- You can sign in as the IAM user with MFA.
-- You are **not** using the root user for the next lab.
+- You can sign in as the IAM user (e.g. **`lab-admin`**) with MFA.
+- You understand **why** daily work should not use root ([runbook](runbooks/create-admin-iam-user.md#why-not-use-root-for-daily-work)).
+- You are signed in as the IAM user, not root, before starting Lab 2 or later labs.
 
 ## Clean up
 
