@@ -16,3 +16,5 @@ Each lab has a `runbooks/` folder: numbered tasks with verify steps and a **Last
 A lab is "ready" when someone has followed its runbooks on a real account.
 
 **Labs 1 + 2:** [docs/labs-1-2-checklist.md](../docs/labs-1-2-checklist.md)
+
+**DevOps track (Labs 3+ and beyond):** [docs/devops-engineer-path.md](../docs/devops-engineer-path.md)
