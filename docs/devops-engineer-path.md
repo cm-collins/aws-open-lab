@@ -2,19 +2,21 @@
 
 Use this with the [lab sequence](../labs/README.md). **Labs 1–2** are written; **3–6** are planned in the root README but not in the repo yet—treat the Lab 3–6 sections below as **targets** until those folders exist.
 
-**Prerequisite:** [Labs 1–2 completion checklist](labs-1-2-checklist.md) (account guardrails, **`lab-admin`**, CLI **VERIFIED**, home **region** chosen).
+**Prerequisite:** [Labs 1–2 completion checklist](labs-1-2-checklist.md) (account guardrails, `lab-admin`, CLI **VERIFIED**, home **region** chosen).
 
 ---
 
 ## Phase 0 — Close gaps (if anything is unchecked)
 
-- [ ] Lab 1 runbooks **1–5** done (MFA, budget, **`lab-admin`**, billing group if needed)
+- [ ] Lab 1 runbooks **1–5** done (MFA, budget, `lab-admin`, billing group if needed)
 - [ ] `bash labs/02-aws-cli/scripts/verify-aws-cli-setup.sh` → **VERIFIED**
 - [ ] Default region set: `aws configure get region --profile lab-admin`
 - [ ] Optional: Lab 1 budget CLI runbooks (automation practice)
 - [ ] Read [Foundations — IAM, VPC, EC2, S3](foundations.md) once
 
 ---
+
+
 
 ## Phase 1 — Core platform (repo Labs 3–6, in order)
 
@@ -63,6 +65,8 @@ When runbooks land in `labs/03-networking/`, you should be able to check off:
 
 ---
 
+
+
 ## Phase 2 — DevOps practice areas (after Phase 1)
 
 Not yet first-class labs in this repo; use AWS docs + small spikes in the **same** account (with budget alerts on).
@@ -73,11 +77,15 @@ Not yet first-class labs in this repo; use AWS docs + small spikes in the **same
 - [ ] IAM Identity Center (SSO) for human access; roles for CI and EC2/Lambda
 - [ ] Permission boundaries and separation of duties (who can change IAM vs deploy)
 
+
+
 ### CI/CD
 
 - [ ] One pipeline: GitHub Actions or CodePipeline building and deploying to S3/EC2/ECS
 - [ ] OIDC trust to AWS (no static `AKIA` in GitHub secrets)
 - [ ] Deploy to a **non-prod** account or clearly tagged resources first
+
+
 
 ### Containers and orchestration
 
@@ -85,17 +93,23 @@ Not yet first-class labs in this repo; use AWS docs + small spikes in the **same
 - [ ] ECS Fargate **or** EKS (pick one for depth—not both on day one)
 - [ ] ALB + target group + health checks
 
+
+
 ### Observability
 
 - [ ] CloudWatch metrics and alarms on one resource you care about
 - [ ] Log groups, retention, and a simple dashboard
 - [ ] X-Ray or ADOT only after logs/metrics feel boring
 
+
+
 ### Reliability and ops
 
 - [ ] Multi-AZ for something that matters (RDS or ALB+ASG)
 - [ ] Backup: AWS Backup or RDS snapshots; restore drill once
 - [ ] Runbook: “service down” → metrics → logs → recent deploy
+
+
 
 ### Security and compliance (DevOps-facing)
 
@@ -104,6 +118,8 @@ Not yet first-class labs in this repo; use AWS docs + small spikes in the **same
 - [ ] GuardDuty optional (cost-aware toggle)
 
 ---
+
+
 
 ## Phase 3 — “Job-ready” capstone (you design it)
 
@@ -120,6 +136,8 @@ Checklist:
 
 ---
 
+
+
 ## How to use this repo while Labs 3–6 are missing
 
 1. Work Phase 0 from [labs-1-2-checklist.md](labs-1-2-checklist.md).
@@ -128,15 +146,19 @@ Checklist:
 
 ---
 
+
+
 ## Suggested weekly rhythm (depth over speed)
 
-| Week focus | Emphasis |
-| --- | --- |
-| 1 | Phase 0 + foundations doc |
-| 2–3 | VPC lab (draw diagrams, break routing on purpose) |
-| 4 | EC2 + SSM + instance roles |
-| 5 | S3 + IAM policies |
-| 6 | Terraform/CDK port of VPC+EC2 |
-| 7+ | One Phase 2 topic per week (CI, then containers, then observability) |
+
+| Week focus | Emphasis                                                             |
+| ---------- | -------------------------------------------------------------------- |
+| 1          | Phase 0 + foundations doc                                            |
+| 2–3        | VPC lab (draw diagrams, break routing on purpose)                    |
+| 4          | EC2 + SSM + instance roles                                           |
+| 5          | S3 + IAM policies                                                    |
+| 6          | Terraform/CDK port of VPC+EC2                                        |
+| 7+         | One Phase 2 topic per week (CI, then containers, then observability) |
+
 
 Adjust pace; tear down billable resources between weeks.
