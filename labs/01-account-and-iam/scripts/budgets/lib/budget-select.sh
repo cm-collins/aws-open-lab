@@ -241,7 +241,10 @@ budget_offer_sync_limit_to_env() {
   local answer
 
   [[ -f "$LAB_CONFIG_FILE" ]] || return 0
-  [[ -e "$tty_in" && -r "$tty_in" ]] || return 0
+  # Prompt only on a real interactive terminal (/dev/tty may exist but not be usable in CI/agents).
+  if [[ ! -t 0 ]] || [[ ! -t 1 ]] || [[ ! -e "$tty_in" ]] || [[ ! -r "$tty_in" ]] || [[ ! -w "$tty_in" ]]; then
+    return 0
+  fi
 
   po_section "Sync .env"
   po_table_header

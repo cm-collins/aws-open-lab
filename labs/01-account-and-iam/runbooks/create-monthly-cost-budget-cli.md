@@ -9,6 +9,7 @@ A **monthly cost budget** exists in your account (name from **`BUDGET_NAME`**) w
 - Runbooks **1–5** in this lab (console guardrails first)
 - [Lab 2 — Install and configure the AWS CLI](../../02-aws-cli/runbooks/install-and-configure-aws-cli.md) — `export AWS_PROFILE=lab-admin` and **`aws sts get-caller-identity`** show **`lab-admin`**
 - **`jq`** installed
+- IAM: **`lab-admin`** needs permission to call **AWS Budgets** and **SNS** (Lab 1 **`AdministratorAccess`** is enough). If you tightened policies, add the **`Billing`** job function or budgets actions — see [Enable IAM billing access via a group](enable-iam-billing-via-group.md).
 - Time: ~10 minutes
 
 ## Steps
@@ -34,7 +35,15 @@ A **monthly cost budget** exists in your account (name from **`BUDGET_NAME`**) w
    bash labs/01-account-and-iam/scripts/budgets/verify-cli-monthly-cost-budget.sh
    ```
 
-4. Confirm in console **Billing → Budgets** and confirm notification email if AWS sends one.
+4. Confirm in console **Billing → Budgets** and confirm notification email if AWS sends one (SNS **Confirm subscription** — same as [billing-alert.md](billing-alert.md)).
+
+## Troubleshooting
+
+| Symptom | Likely cause | What to try |
+| --- | --- | --- |
+| `AccessDenied` on CreateBudget | IAM missing billing/budget permissions | [enable-iam-billing-via-group.md](enable-iam-billing-via-group.md); attach **`Billing`** or use root once for setup |
+| Verify **`SNS confirmation`** **WARN** | Email not confirmed | Confirm SNS message in inbox/spam |
+| **`SKIPPED`** (already exists) | Idempotent re-run | Use [update](update-monthly-cost-budget-cli.md) or pick a new **`BUDGET_NAME`** |
 
 ## Teardown
 
@@ -42,5 +51,6 @@ A **monthly cost budget** exists in your account (name from **`BUDGET_NAME`**) w
 
 ## Last verified
 
-- **Date:** not yet run from this repo layout
-- **Region:** N/A (Budgets API)
+- **Date:** 2026-09-24
+- **Region:** N/A (Budgets API; profile **us-east-2**)
+- **Notes:** `create-monthly-cost-budget.sh` **CREATED** `lab-monthly-spend-cli`; `verify-cli-monthly-cost-budget.sh` **VERIFIED**; CLI 2.37.0, profile **lab-admin**.

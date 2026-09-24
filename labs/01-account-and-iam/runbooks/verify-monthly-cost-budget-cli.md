@@ -34,6 +34,7 @@ For the **console** budget, see [Verify console budget (CLI)](verify-console-mon
 | --- | --- |
 | `Budget exists` **FAIL** | Wrong `BUDGET_NAME` or create script not run yet |
 | `Monthly limit` **FAIL** | Run [update-monthly-cost-budget-cli.md](update-monthly-cost-budget-cli.md) or fix `.env` |
+| **`SNS confirmation`** **WARN** | Confirm budget/SNS email; threshold alerts are separate from the confirmation message |
 
 ## Related
 
@@ -41,5 +42,6 @@ For the **console** budget, see [Verify console budget (CLI)](verify-console-mon
 
 ## Last verified
 
-- **Date:** not yet run from this repo layout
+- **Date:** 2026-09-24
 - **Region:** N/A (Budgets API)
+- **Notes:** `verify-cli-monthly-cost-budget.sh` **VERIFIED** for `lab-monthly-spend-cli` / USD 11.

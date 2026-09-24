@@ -37,5 +37,6 @@ Or set **`BUDGET_LIMIT_USD`** in `.env` and run without a TTY (CI).
 
 ## Last verified
 
-- **Date:** not yet run from this repo layout
-- **Region:** N/A
+- **Date:** 2026-09-24
+- **Region:** N/A (Budgets API)
+- **Notes:** `update-monthly-cost-budget.sh --name lab-monthly-spend-cli --limit 12` then `--limit 11`; **UPDATED** both times; non-interactive `.env` sync prompt skipped (no TTY).

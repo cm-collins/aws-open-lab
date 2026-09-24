@@ -1,6 +1,8 @@
 # Lab 2 — AWS CLI (plan and layout)
 
-**Status:** Runbooks in [labs/02-aws-cli](../labs/02-aws-cli/). Budget scripts moved to [Lab 1](../labs/01-account-and-iam/scripts/budgets/).
+**Status:** **Implemented.** Runbooks and `verify-aws-cli-setup.sh` live in [labs/02-aws-cli](../labs/02-aws-cli/). Budget scripts live under [Lab 1](../labs/01-account-and-iam/scripts/budgets/). Learner checklist: [labs-1-2-checklist.md](labs-1-2-checklist.md).
+
+This file is a historical layout reference; prefer the lab READMEs for day-to-day use.
 
 ## Split of responsibilities
 

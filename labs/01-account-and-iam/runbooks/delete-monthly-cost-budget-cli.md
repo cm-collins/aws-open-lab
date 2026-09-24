@@ -30,5 +30,6 @@ Console budgets from [billing-alert.md](billing-alert.md) can also be deleted in
 
 ## Last verified
 
-- **Date:** not yet run from this repo layout
-- **Region:** N/A
+- **Date:** 2026-09-24
+- **Region:** N/A (Budgets API)
+- **Notes:** `--name` on missing budget → **NO-OP**; ephemeral `lab-open-lab-delete-test` create + **DELETED** via script (non-interactive).

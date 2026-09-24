@@ -1,6 +1,6 @@
 # Lab 2 — AWS CLI and bash automation
 
-**Status:** Runbooks ready to try — mark **ready** after verify script passes on a real account.
+**Status:** Ready — install + verify runbooks and `verify-aws-cli-setup.sh` verified on a real account.
 
 **Goal.** Install and verify the AWS CLI with profile **`lab-admin`**. Use scripts for **CLI hygiene**; use [Lab 1 scripts](../01-account-and-iam/scripts/) for **budgets**.
 
@@ -33,5 +33,8 @@ See [docs/lab-2-script-roadmap.md](../../docs/lab-2-script-roadmap.md) for plann
 
 ## Final check
 
-- `bash labs/02-aws-cli/scripts/verify-aws-cli-setup.sh` succeeds
-- Optional: run Lab 1 [create budget CLI](../01-account-and-iam/runbooks/create-monthly-cost-budget-cli.md)
+- `bash labs/02-aws-cli/scripts/verify-aws-cli-setup.sh` succeeds (**`VERIFIED`**)
+- Profile **`lab-admin`** has a default **region** set (needed from Lab 3 onward)
+- Optional: Lab 1 [budget CLI runbooks](../01-account-and-iam/runbooks/README.md#optional--budgets-via-cli-after-lab-2)
+
+Full path: [docs/labs-1-2-checklist.md](../../docs/labs-1-2-checklist.md).

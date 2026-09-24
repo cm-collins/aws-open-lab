@@ -207,12 +207,23 @@ Do **not** create access keys for the **root** user. Use **`lab-admin`**.
 | **Next** disabled on Step 1 | Confirmation unchecked | Check **I understand… proceed to create an access key** |
 | Wrong use case selected | Local code vs CLI | Go **Previous** and pick **Command Line Interface (CLI)** |
 
+## Security: access keys and MFA
+
+Lab 1 encourages **MFA** for root and (optionally) for **`lab-admin`** in the **console**. The CLI profile you configure here uses **long-lived access keys** stored in **`~/.aws/credentials`**.
+
+- Do not commit keys, paste them in chat, or share screen recordings that show the secret.
+- Prefer a **password manager** when running `aws configure`; the secret is shown only once at key creation.
+- If a key leaks, **deactivate and delete** it in IAM and create a new key.
+- In production teams, prefer **IAM Identity Center (SSO)** or other **temporary** credentials instead of permanent keys on laptops.
+
+Console MFA and CLI keys solve different problems: MFA protects interactive sign-in; keys authenticate API calls from your machine.
+
 ## Teardown
 
 Keep the CLI installed. To revoke CLI access only: IAM → **`lab-admin`** → **Security credentials** → deactivate/delete the access key. Remove or update `~/.aws/credentials` for profile **`lab-admin`**.
 
 ## Last verified
 
-- **Date:** 2026-09-23
+- **Date:** 2026-09-24
 - **Region:** **`us-east-2`** in `~/.aws/config`
 - **Notes:** Access key wizard (CLI use case + confirmation); `export AWS_PROFILE=lab-admin`; `aws sts get-caller-identity` returns `:user/lab-admin`. Access key id must be **`AKIA…`**, not the IAM user name.

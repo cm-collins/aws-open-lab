@@ -69,6 +69,9 @@ Pick **Monthly cost budget** unless you want an alert on almost any charge. You 
 1. Check the inbox for each address you added. AWS sends subscription messages for budget notifications.
 2. Open each message and **confirm** the subscription (link in the email). Until you confirm, alerts may not arrive.
   - **Verify:** Budget detail page lists your email recipients without a “pending confirmation” warning (wording may vary).
+3. Optional (after Lab 2): budget verify scripts report **`SNS confirmation`** **OK** when no **PendingConfirmation** remains; **WARN** until you confirm.
+
+**Naming tip:** Note the **budget name** and **monthly limit** you chose here. If you later run the CLI create script, use a **different** name (for example console **`lab-monthly-spend`**, CLI **`lab-monthly-spend-cli`**) so [verify-console](verify-console-monthly-cost-budget-cli.md) and [verify-cli](verify-monthly-cost-budget-cli.md) can both match `.env`.
 
 ### Verify with CLI (optional, after Lab 2)
 
@@ -100,7 +103,7 @@ If daily sign-in uses an IAM user, complete **[Enable IAM billing access via a g
 | Symptom                                                    | Likely cause                                | What to try                                                                                  |
 | ---------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | No alert email (only confirmation mail)                    | Normal at $0 spend                          | Budget alerts fire at **85% / 100% / forecast**, not when the budget is created              |
-| No mail at all                                             | Subscription not confirmed                  | Search **dev-collins@outlook.com** spam for **AWS Budgets** / **Amazon SNS**; click **Confirm subscription** |
+| No mail at all                                             | Subscription not confirmed                  | Search your **BUDGET_EMAIL** inbox and spam for **AWS Budgets** / **Amazon SNS**; click **Confirm subscription** |
 | verify shows **SNS confirmation FAIL**                       | PendingConfirmation                       | Re-send from Billing → budget → alert email, or delete/recreate budget after fixing `.env` email |
 | **Budgets** missing or access denied                       | IAM user without billing/budget permissions | Sign in as root for setup, or attach billing policy to the IAM user                          |
 | Alert never fires but you see charges in **Cost Explorer** | Budget amount set very high                 | Lower the budget amount or add a **Zero spend budget** as a second budget                    |

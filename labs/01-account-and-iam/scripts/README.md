@@ -23,6 +23,8 @@ config/
 - Lab 1 runbooks **1–5** (especially [Set a billing alert](../runbooks/billing-alert.md))
 - [Lab 2 — Install and configure the AWS CLI](../../02-aws-cli/runbooks/install-and-configure-aws-cli.md) (`aws`, profile **`lab-admin`**)
 
+**Console vs CLI budget:** Runbook 3 creates a console budget; these scripts usually manage a **second** budget (different **`BUDGET_NAME`**). See [`config/budgets.env.example`](../config/budgets.env.example) and [Labs 1–2 checklist](../../../docs/labs-1-2-checklist.md).
+
 ## Lifecycle
 
 | Script | Runbook |

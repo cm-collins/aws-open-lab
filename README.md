@@ -29,7 +29,7 @@ For a consistent Linux shell with **AWS CLI v2**, **gh**, **Terraform**, **CDK**
 | 5 | Storage | Store and share files without making the bucket public by accident |
 | 6 | Infrastructure as code | Recreate a lab from a file instead of the console |
 
-Labs marked “not written yet” land when someone has run them on a real account. Lab 2 runbooks are available; bump **Last verified** after you complete them.
+Labs marked “not written yet” land when someone has run them on a real account. Labs **1** and **2** are ready; use [docs/labs-1-2-checklist.md](docs/labs-1-2-checklist.md) to confirm you are done before Lab 3.
 
 ## If you already know another cloud
 

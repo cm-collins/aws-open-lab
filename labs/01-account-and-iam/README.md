@@ -4,7 +4,11 @@
 
 **You need.** An email address that is not already an AWS root user, a phone or authenticator app for MFA, and a password manager.
 
-**Region.** Any. This lab does not create regional resources. Pick a home region later (for example `eu-west-1`) when labs start creating VPCs and EC2 instances.
+**Region.** Any. This lab does not create regional resources. Pick a **home region** in Lab 2 (`aws configure --profile lab-admin`) before [Lab 3](../README.md) — for example `us-east-2` or `eu-west-1`.
+
+## Console budget vs CLI budget
+
+Runbook **3** creates a **console** monthly cost budget — that alone satisfies the guardrail. Optional runbooks **6–9** (after [Lab 2](../02-aws-cli/)) create a **second** budget via script, usually with a different name (for example console **`lab-monthly-spend`**, CLI **`lab-monthly-spend-cli`**). See [`config/budgets.env.example`](config/budgets.env.example) and [Labs 1–2 checklist](../../docs/labs-1-2-checklist.md).
 
 ## Runbooks
 
@@ -27,11 +31,12 @@ Concepts: [IAM and the other foundations](../../docs/foundations.md#iam)
 ## Final check
 
 - Root has MFA.
-- A billing alert or budget notification is configured.
+- A billing alert or budget notification is configured; **SNS email subscription confirmed** (inbox/spam — alerts do not fire until thresholds).
 - You can sign in as the IAM user (e.g. **`lab-admin`**) with MFA.
 - You understand **why** daily work should not use root ([runbook](runbooks/create-admin-iam-user.md#why-not-use-root-for-daily-work)).
 - You are signed in as the IAM user, not root, before starting Lab 2 or later labs.
 - (Recommended) **`lab-admin`** is in group **`lab-billing`** and **Cost and usage** on the console home loads without **Access denied**.
+- After Lab 2: `bash labs/02-aws-cli/scripts/verify-aws-cli-setup.sh` exits **`VERIFIED`** ([checklist](../../docs/labs-1-2-checklist.md)).
 
 ## Clean up
 

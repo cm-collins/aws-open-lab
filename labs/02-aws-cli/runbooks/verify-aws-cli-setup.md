@@ -22,5 +22,5 @@ Watch **stderr** for phased `INFO`/`ERROR` lines while the summary table prints 
 
 ## Last verified
 
-- **Date:** 2026-09-23 (CLI 2.37.0, profile lab-admin, us-east-2)
+- **Date:** 2026-09-24 (CLI 2.37.0, profile lab-admin, us-east-2)
 - **Region:** from profile (e.g. **us-east-2**)
